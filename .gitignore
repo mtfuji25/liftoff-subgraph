@@ -59,3 +59,14 @@ typings/
 
 # next.js build output
 .next
+
+# Private keys
+keys.json
+
+# Truffle and Graph build artifacts
+build/
+
+# Subgraph stuff
+abis/
+subgraph.yaml
+generated/

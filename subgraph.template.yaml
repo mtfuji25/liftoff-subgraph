@@ -1,0 +1,6 @@
+specVersion: 0.0.2
+description: Liftoff
+repository: https://github.com/Lid-Protocol/liftoff-subgraph.git
+schema:
+  file: ./schema.graphql
+dataSources:

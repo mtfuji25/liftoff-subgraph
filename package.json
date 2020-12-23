@@ -1,6 +1,7 @@
 {
-  "name": "liftoff",
+  "name": "liftoff-subgraph",
   "version": "0.1.0",
+  "description": "Subgraph for Liftoff",
   "scripts": {
     "build-contract": "solc contracts/Gravity.sol --abi -o abis --overwrite && solc contracts/Gravity.sol --bin -o bin --overwrite",
     "create": "graph create liaojikunwork/liftoff --node https://api.thegraph.com/deploy/",
@@ -10,15 +11,27 @@
     "deploy": "graph deploy liaojikunwork/liftoff --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-local": "graph deploy liaojikunwork/liftoff --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lid-Protocol/liftoff-subgraph.git"
+  },
+  "author": {
+    "name": "liaojikun"
+  },
+  "license": "LGPL-3.0",
+  "homepage": "https://github.com/Lid-Protocol/liftoff-subgraph#readme",
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.19.0",
-    "@graphprotocol/graph-ts": "^0.19.0"
+    "@graphprotocol/graph-ts": "^0.19.0",
+    "liftoff-core-contracts": "https://github.com/Lid-Protocol/liftoff-core-contracts.git"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0",
-    "babel-register": "^6.26.0",
-    "truffle": "^5.0.4",
-    "truffle-contract": "^4.0.5",
-    "truffle-hdwallet-provider": "^1.0.4"
+    "@truffle/contract": "^4.1.13",
+    "@truffle/hdwallet-provider": "^1.0.33",
+    "fs-extra": "^9.0.1",
+    "load-json-file": "^6.2.0",
+    "mocha": "^8.2.1",
+    "mustache": "^4.1.0",
+    "truffle": "^5.0.4"
   }
 }
