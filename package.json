@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "Subgraph for Liftoff",
   "scripts": {
-    "build-contract": "solc contracts/Gravity.sol --abi -o abis --overwrite && solc contracts/Gravity.sol --bin -o bin --overwrite",
     "create": "graph create liaojikunwork/liftoff --node https://api.thegraph.com/deploy/",
     "create-local": "graph create liaojikunwork/liftoff --node http://127.0.0.1:8020",
     "codegen": "graph codegen",
@@ -23,6 +22,7 @@
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.19.0",
     "@graphprotocol/graph-ts": "^0.19.0",
+    "@lidprotocol/xlock-contracts": "^1.0.0",
     "liftoff-core-contracts": "https://github.com/Lid-Protocol/liftoff-core-contracts.git"
   },
   "dependencies": {

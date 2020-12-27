@@ -1,6 +1,43 @@
-type Gravatar @entity {
+type TokenSale @entity {
   id: ID!
-  owner: Bytes!
-  displayName: String!
-  imageUrl: String!
+  tokenId: BigInt!
+  ipfsHash: String!
+  startTime: Int!
+  endTime: Int!
+  softCap: BigInt!
+  hardCap: BigInt!
+  totalSupply: BigInt!
+  totalIgnited: BigInt!
+  rewardSupply: BigInt!
+  dev: Bytes!
+  deployed: Bytes!
+  isSparked: Boolean!
+  name: String!
+  symbol: String!
+  ignitors: [Ignitor]! @derivedFrom(field: "tokenSale")
+}
+
+type Ignitor @entity {
+  id: ID!
+  ignited: BigInt!
+  hasClaimed: Boolean!
+  hasRefunded: Boolean!
+  tokenSale: TokenSale!
+}
+
+type TokenInsurance @entity {
+  id: ID!
+  tokenId: BigInt!
+  startTime: Int!
+  totalIgnited: BigInt!
+  tokensPerEthWad: BigInt!
+  baseXEth: BigInt!
+  baseTokenLidPool: BigInt!
+  redeemedXEth: BigInt!
+  claimedXEth: BigInt!
+  claimedTokenLidPool: BigInt!
+  dev: Bytes!
+  deployed: Bytes!
+  isUnwound: Boolean!
+  hasBaseFeeClaimed: Boolean!
 }
