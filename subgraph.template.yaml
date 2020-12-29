@@ -25,59 +25,59 @@ dataSources:
           handler: handleRegisterProject
       file: ./src/LiftoffRegistrationMapping.ts
   - kind: ethereum/contract
-      name: LiftoffEngine
-      network: {{network}}
-      source:
-        address: "{{LiftoffEngine.address}}"
-        abi: LiftoffEngine
-        startBlock: {{LiftoffEngine.startBlock}}
-      mapping:
-        kind: ethereum/events
-        apiVersion: 0.0.3
-        language: wasm/assemblyscript
-        entities:
-          - TokenSale
-          - Ignitor
-        abis:
-          - name: LiftoffEngine
-            file: ./abis/LiftoffEngine.json
-        eventHandlers:
-          - event: LaunchToken(uint256,uint256,uint256,uint256,uint256,uint256,string,string,address)
-            handler: handleLaunchToken
-          - event: Spark(uint256,address,uint256)
-            handler: handleSpark
-          - event: Ignite(uint256,address,uint256)
-            handler: handleIgnite
-          - event: ClaimReward(uint256,address,uint256)
-            handler: handleClaimReward
-          - event: ClaimRefund(uint256,address)
-            handler: handleClaimRefund
-        file: ./src/LiftoffEngineMapping.ts
+    name: LiftoffEngine
+    network: {{network}}
+    source:
+      address: "{{LiftoffEngine.address}}"
+      abi: LiftoffEngine
+      startBlock: {{LiftoffEngine.startBlock}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - TokenSale
+        - Ignitor
+      abis:
+        - name: LiftoffEngine
+          file: ./abis/LiftoffEngine.json
+      eventHandlers:
+        - event: LaunchToken(uint256,uint256,uint256,uint256,uint256,uint256,string,string,address)
+          handler: handleLaunchToken
+        - event: Spark(uint256,address,uint256)
+          handler: handleSpark
+        - event: Ignite(uint256,address,uint256)
+          handler: handleIgnite
+        - event: ClaimReward(uint256,address,uint256)
+          handler: handleClaimReward
+        - event: ClaimRefund(uint256,address)
+          handler: handleClaimRefund
+      file: ./src/LiftoffEngineMapping.ts
   - kind: ethereum/contract
-      name: LiftoffInsurance
-      network: {{network}}
-      source:
-        address: "{{LiftoffInsurance.address}}"
-        abi: LiftoffInsurance
-        startBlock: {{LiftoffInsurance.startBlock}}
-      mapping:
-        kind: ethereum/events
-        apiVersion: 0.0.3
-        language: wasm/assemblyscript
-        entities:
-          - TokenInsurance
-        abis:
-          - name: LiftoffInsurance
-            file: ./abis/LiftoffInsurance.json
-        eventHandlers:
-          - event: Register(uint256)
-            handler: handleRegister
-          - event: CreateInsurance(uint256,uint256,uint256,uint256,uint256,uint256,address,address)
-            handler: handleCreateInsurance
-          - event: ClaimBaseFee(uint256,uint256)
-            handler: handleClaimBaseFee
-          - event: Claim(uint256,uint256,uint256)
-            handler: handleClaim
-          - event: Redeem(uint256,uint256)
-            handler: handleRedeem
-        file: ./src/LiftoffInsuranceMapping.ts
+    name: LiftoffInsurance
+    network: {{network}}
+    source:
+      address: "{{LiftoffInsurance.address}}"
+      abi: LiftoffInsurance
+      startBlock: {{LiftoffInsurance.startBlock}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - TokenInsurance
+      abis:
+        - name: LiftoffInsurance
+          file: ./abis/LiftoffInsurance.json
+      eventHandlers:
+        - event: Register(uint256)
+          handler: handleRegister
+        - event: CreateInsurance(uint256,uint256,uint256,uint256,uint256,uint256,address,address)
+          handler: handleCreateInsurance
+        - event: ClaimBaseFee(uint256,uint256)
+          handler: handleClaimBaseFee
+        - event: Claim(uint256,uint256,uint256)
+          handler: handleClaim
+        - event: Redeem(uint256,uint256)
+          handler: handleRedeem
+      file: ./src/LiftoffInsuranceMapping.ts

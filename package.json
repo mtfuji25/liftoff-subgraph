@@ -3,11 +3,15 @@
   "version": "0.1.0",
   "description": "Subgraph for Liftoff",
   "scripts": {
-    "create": "graph create liaojikunwork/liftoff --node https://api.thegraph.com/deploy/",
+    "compile": "truffle compile --all",
     "create-local": "graph create liaojikunwork/liftoff --node http://127.0.0.1:8020",
-    "codegen": "graph codegen",
+    "remove-local": "graph remove liaojikunwork/liftoff --node http://127.0.0.1:8020",
+    "codegen": "truffle exec render-templates.js && graph codegen",
+    "codegen:ropsten": "truffle exec --network=ropsten render-templates.js && graph codegen",
+    "codegen:mainnet": "truffle exec --network=mainnet render-templates.js && graph codegen",
     "build": "graph build",
-    "deploy": "graph deploy liaojikunwork/liftoff --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy:mainnet": "graph deploy liaojikunwork/liftoff --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy:ropsten": "graph deploy liaojikunwork/liftoff-ropsten --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
     "deploy-local": "graph deploy liaojikunwork/liftoff --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
   },
   "repository": {
@@ -22,16 +26,16 @@
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.19.0",
     "@graphprotocol/graph-ts": "^0.19.0",
-    "@lidprotocol/xlock-contracts": "^1.0.0",
+    "@lidprotocol/xlock-contracts": "^1.0.1",
     "liftoff-core-contracts": "https://github.com/Lid-Protocol/liftoff-core-contracts.git"
   },
   "dependencies": {
-    "@truffle/contract": "^4.1.13",
-    "@truffle/hdwallet-provider": "^1.0.33",
+    "@truffle/contract": "^4.3.4",
+    "@truffle/hdwallet-provider": "^1.2.1",
     "fs-extra": "^9.0.1",
     "load-json-file": "^6.2.0",
     "mocha": "^8.2.1",
     "mustache": "^4.1.0",
-    "truffle": "^5.0.4"
+    "truffle": "^5.1.59"
   }
 }

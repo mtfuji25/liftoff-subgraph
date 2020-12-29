@@ -28,16 +28,18 @@ type Ignitor @entity {
 type TokenInsurance @entity {
   id: ID!
   tokenId: BigInt!
-  startTime: Int!
-  totalIgnited: BigInt!
-  tokensPerEthWad: BigInt!
-  baseXEth: BigInt!
-  baseTokenLidPool: BigInt!
-  redeemedXEth: BigInt!
-  claimedXEth: BigInt!
-  claimedTokenLidPool: BigInt!
-  dev: Bytes!
-  deployed: Bytes!
-  isUnwound: Boolean!
-  hasBaseFeeClaimed: Boolean!
+  isRegistered: Boolean!
+  isInitialized: Boolean!
+  startTime: Int
+  totalIgnited: BigInt
+  tokensPerEthWad: BigInt
+  baseXEth: BigInt
+  baseTokenLidPool: BigInt
+  redeemedXEth: BigInt
+  claimedXEth: BigInt
+  claimedTokenLidPool: BigInt
+  dev: Bytes
+  deployed: Bytes
+  isUnwound: Boolean
+  hasBaseFeeClaimed: Boolean
 }

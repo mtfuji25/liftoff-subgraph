@@ -14,7 +14,7 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(
           keys.privateKey,
-          `https://ropsten.infura.io/v3/${keys.infuraKey}`
+          `wss://ropsten.infura.io/ws/v3/${keys.infuraKey}`
         );
       },
       network_id: "3"
@@ -23,7 +23,7 @@ module.exports = {
       provider: function() {
         return new HDWalletProvider(
           keys.privateKey,
-          `https://mainnet.infura.io/v3/${keys.infuraKey}`
+          `wss://mainnet.infura.io/ws/v3/${keys.infuraKey}`
         );
       },
       network_id: "1"

@@ -1,0 +1,42 @@
+{
+  "LiftoffSettings": {
+    "1": {
+      "address": "",
+      "transactionHash": ""
+    },
+    "3": {
+      "address": "0x2852AA60A86770FE295CeD51ed832ced0C09b5FE",
+      "transactionHash": "0x17ba79ba399d889ce0e663a76086aad9ebb9831d5afc05e9d058461863575079"
+    }
+  },
+  "LiftoffEngine": {
+    "1": {
+      "address": "",
+      "transactionHash": ""
+    },
+    "3": {
+      "address": "0xecbdc53216769bc2e854bce9cd21183cde28df76",
+      "transactionHash": "0xb4c1554a35352aa1d2923cc238c3079585e846d8185ad7310cb841b0730bbb2a"
+    }
+  },
+  "LiftoffRegistration": {
+    "1": {
+      "address": "",
+      "transactionHash": ""
+    },
+    "3": {
+      "address": "0x1c5b37c07d2aa84579bd72e9266f218cc865c8cb",
+      "transactionHash": "0xab11509c49e71046a72f080b6e2893e2eb32207203af8b365beb12d297899922"
+    }
+  },
+  "LiftoffInsurance": {
+    "1": {
+      "address": "",
+      "transactionHash": ""
+    },
+    "3": {
+      "address": "0xea723a65fb681868dabd6456ae96a92b677a8f27",
+      "transactionHash": "0xb1f5ef3974962f1d6f4b09d477ab63d554297c10b318f3ce62eee434a77876bc"
+    }
+  }
+}

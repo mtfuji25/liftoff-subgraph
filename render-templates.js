@@ -22,6 +22,7 @@ module.exports = function(callback) {
       fs.outputJsonSync(`abis/${contractName}.json`, abi, { spaces: 2 });
 
       const C = artifacts.require(contractName);
+
       try {
         const { address } = C;
         templateData[contractName] = {
@@ -30,7 +31,9 @@ module.exports = function(callback) {
           startBlock: (await web3.eth.getTransactionReceipt(C.transactionHash))
             .blockNumber
         };
-      } catch (e) {}
+      } catch (e) {
+        console.log(e);
+      }
     }
 
     for (const templatedFileDesc of [["subgraph", "yaml"]]) {
