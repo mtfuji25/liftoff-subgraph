@@ -34,7 +34,6 @@ export function handleLaunchToken(event: LaunchToken): void {
   tokenSale.isSparked = false;
   tokenSale.name = event.params.name;
   tokenSale.symbol = event.params.symbol;
-  tokenSale.ignitors = [];
 
   tokenSale.save();
 }
