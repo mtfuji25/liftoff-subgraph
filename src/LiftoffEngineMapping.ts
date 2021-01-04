@@ -30,6 +30,7 @@ export function handleLaunchToken(event: LaunchToken): void {
   tokenSale.rewardSupply = zero;
   tokenSale.dev = event.params.dev;
   tokenSale.deployed = Bytes.fromHexString(addressZero) as Bytes;
+  tokenSale.pair = Bytes.fromHexString(addressZero) as Bytes;
   tokenSale.isSparked = false;
   tokenSale.name = event.params.name;
   tokenSale.symbol = event.params.symbol;

@@ -11,6 +11,7 @@ type TokenSale @entity {
   rewardSupply: BigInt!
   dev: Bytes!
   deployed: Bytes!
+  pair: Bytes!
   isSparked: Boolean!
   name: String!
   symbol: String!
@@ -40,6 +41,7 @@ type TokenInsurance @entity {
   claimedTokenLidPool: BigInt
   dev: Bytes
   deployed: Bytes
+  pair: Bytes
   isUnwound: Boolean
   hasBaseFeeClaimed: Boolean
 }
