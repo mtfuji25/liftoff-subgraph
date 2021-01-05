@@ -69,6 +69,7 @@ export function handleIgnite(event: Ignite): void {
   if (igniteId == null) {
     igniter = new Ignitor(igniteId);
     igniter.ignited = zero;
+    igniter.address = event.params.igniter;
     igniter.hasClaimed = false;
     igniter.hasRefunded = false;
     igniter.tokenSale = tokenSaleId;
