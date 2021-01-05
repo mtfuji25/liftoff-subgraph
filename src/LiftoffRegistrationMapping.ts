@@ -7,7 +7,7 @@ export function handleRegisterProject(event: TokenIpfsHash): void {
   let tokenSale = TokenSale.load(tokenSaleId);
 
   if (tokenSale == null) {
-    log.info("cannot fine tokenSale {}", [tokenSaleId]);
+    log.info("cannot find tokenSale {}", [tokenSaleId]);
     return;
   }
 

@@ -43,7 +43,7 @@ export function handleSpark(event: Spark): void {
   let tokenSale = TokenSale.load(tokenSaleId);
 
   if (tokenSale == null) {
-    log.info("cannot fine tokenSale {}", [tokenSaleId]);
+    log.info("cannot find tokenSale {}", [tokenSaleId]);
     return;
   }
 
@@ -58,7 +58,7 @@ export function handleIgnite(event: Ignite): void {
   let tokenSale = TokenSale.load(tokenSaleId);
 
   if (tokenSale == null) {
-    log.info("cannot fine tokenSale {}", [tokenSaleId]);
+    log.info("cannot find tokenSale {}", [tokenSaleId]);
     return;
   }
 
@@ -66,7 +66,7 @@ export function handleIgnite(event: Ignite): void {
     "ignite_" + tokenSaleId + "_" + event.params.igniter.toHexString();
 
   let igniter = Ignitor.load(igniteId);
-  if (igniteId == null) {
+  if (igniter == null) {
     igniter = new Ignitor(igniteId);
     igniter.ignited = zero;
     igniter.address = event.params.igniter;
@@ -87,7 +87,7 @@ export function handleClaimReward(event: ClaimReward): void {
   let tokenSale = TokenSale.load(tokenSaleId);
 
   if (tokenSale == null) {
-    log.info("cannot fine tokenSale {}", [tokenSaleId]);
+    log.info("cannot find tokenSale {}", [tokenSaleId]);
     return;
   }
 
@@ -96,7 +96,7 @@ export function handleClaimReward(event: ClaimReward): void {
   let igniter = Ignitor.load(igniteId);
 
   if (igniter == null) {
-    log.info("cannot fine igniter {}", [igniteId]);
+    log.info("cannot find igniter {}", [igniteId]);
     return;
   }
 
@@ -109,7 +109,7 @@ export function handleClaimRefund(event: ClaimRefund): void {
   let tokenSale = TokenSale.load(tokenSaleId);
 
   if (tokenSale == null) {
-    log.info("cannot fine tokenSale {}", [tokenSaleId]);
+    log.info("cannot find tokenSale {}", [tokenSaleId]);
     return;
   }
 
@@ -118,7 +118,7 @@ export function handleClaimRefund(event: ClaimRefund): void {
   let igniter = Ignitor.load(igniteId);
 
   if (igniter == null) {
-    log.info("cannot fine igniter {}", [igniteId]);
+    log.info("cannot find igniter {}", [igniteId]);
     return;
   }
 

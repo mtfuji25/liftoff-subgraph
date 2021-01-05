@@ -29,7 +29,7 @@ export function handleCreateInsurance(event: CreateInsurance): void {
   let insurance = TokenInsurance.load(tokenInsuranceId);
 
   if (insurance == null) {
-    log.info("cannot fine insurance {}", [tokenInsuranceId]);
+    log.info("cannot find insurance {}", [tokenInsuranceId]);
     return;
   }
 
@@ -54,7 +54,7 @@ export function handleClaimBaseFee(event: ClaimBaseFee): void {
   let insurance = TokenInsurance.load(tokenInsuranceId);
 
   if (insurance == null) {
-    log.info("cannot fine insurance {}", [tokenInsuranceId]);
+    log.info("cannot find insurance {}", [tokenInsuranceId]);
     return;
   }
 
@@ -67,7 +67,7 @@ export function handleClaim(event: Claim): void {
   let insurance = TokenInsurance.load(tokenInsuranceId);
 
   if (insurance == null) {
-    log.info("cannot fine insurance {}", [tokenInsuranceId]);
+    log.info("cannot find insurance {}", [tokenInsuranceId]);
     return;
   }
 
@@ -84,7 +84,7 @@ export function handleRedeem(event: Redeem): void {
   let insurance = TokenInsurance.load(tokenInsuranceId);
 
   if (insurance == null) {
-    log.info("cannot fine insurance {}", [tokenInsuranceId]);
+    log.info("cannot find insurance {}", [tokenInsuranceId]);
     return;
   }
 
