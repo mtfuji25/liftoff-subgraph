@@ -49,6 +49,7 @@ export function handleSpark(event: Spark): void {
 
   tokenSale.deployed = event.params.deployed;
   tokenSale.rewardSupply = event.params.rewardSupply;
+  tokenSale.isSparked = true;
 
   tokenSale.save();
 }

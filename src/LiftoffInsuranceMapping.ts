@@ -13,7 +13,7 @@ export function handleRegister(event: Register): void {
   let tokenInsuranceId = event.params.tokenId.toString();
   let insurance = TokenInsurance.load(tokenInsuranceId);
 
-  if (insurance != null) {
+  if (insurance == null) {
     insurance = new TokenInsurance(tokenInsuranceId);
     insurance.tokenId = event.params.tokenId;
     insurance.isRegistered = false;
