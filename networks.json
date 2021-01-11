@@ -1,8 +1,8 @@
 {
   "LiftoffSettings": {
     "1": {
-      "address": "",
-      "transactionHash": ""
+      "address": "0xF54d9fC14A006763C83d4e12B1BB5dFB02eA668c",
+      "transactionHash": "0x61830c17d7339d67b5dd016fdf5f7d0d8b722aa4a2ae54f933388353b01bacbc"
     },
     "3": {
       "address": "0x71A442F174EA408f762624981c07Ca3F800Aa72E",
@@ -11,8 +11,8 @@
   },
   "LiftoffEngine": {
     "1": {
-      "address": "",
-      "transactionHash": ""
+      "address": "0x22bCFca3E18B2e7f114e17245e50D9dBf8Bb5e47",
+      "transactionHash": "0xceabe25d9b6238497fcdb9f9bfff11a1d6b15e8e987159a2dc564c0ee2344cae"
     },
     "3": {
       "address": "0xF4CCd4483b393A0526FF939CF15E89eBd3958f2B",
@@ -21,8 +21,8 @@
   },
   "LiftoffRegistration": {
     "1": {
-      "address": "",
-      "transactionHash": ""
+      "address": "0xA4Bf30C2f474fB2ffa35dBF432142DEa08D6655E",
+      "transactionHash": "0x8622f0164508d36fe4c017c1cc3c130fac1d2e2257b802c12b62fd90ed696926"
     },
     "3": {
       "address": "0xadd1539fb19e03eE66fd365a6F6Cad68b49f981C",
@@ -31,8 +31,8 @@
   },
   "LiftoffInsurance": {
     "1": {
-      "address": "",
-      "transactionHash": ""
+      "address": "0x4013F4366beEccb04d2462b061b0C78499eE8FfD",
+      "transactionHash": "0x4b1774e0bc9504f00f4a12ec91999e839ce44d0cd1e1c4faa97d9368d0008f0f"
     },
     "3": {
       "address": "0x4f250e2236457259BDac9f651f62e972Ce502Caa",
