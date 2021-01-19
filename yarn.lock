@@ -4362,7 +4362,7 @@ libp2p-crypto@~0.16.1:
 
 "liftoff-core-contracts@https://github.com/Lid-Protocol/liftoff-core-contracts.git":
   version "1.0.0"
-  resolved "https://github.com/Lid-Protocol/liftoff-core-contracts.git#4d60af29855a7ed900b06aaffa0b83ac7bc7bc7b"
+  resolved "https://github.com/Lid-Protocol/liftoff-core-contracts.git#1336893eebe57614da61693924a71183ca5c0848"
   dependencies:
     "@openzeppelin/contracts-upgradeable" "^3.3.0"
     "@uniswap/lib" "^4.0.1-alpha"

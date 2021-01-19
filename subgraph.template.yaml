@@ -52,6 +52,10 @@ dataSources:
           handler: handleClaimReward
         - event: ClaimRefund(uint256,address)
           handler: handleClaimRefund
+        - event: UpdateEndTime(uint256,uint256)
+          handler: handleUpdateEndTime
+        - event: UndoIgnite(uint256,address,uint256)
+          handler: handleUndoIgnite
       file: ./src/LiftoffEngineMapping.ts
   - kind: ethereum/contract
     name: LiftoffInsurance

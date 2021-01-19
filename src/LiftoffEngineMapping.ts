@@ -6,7 +6,9 @@ import {
   Spark,
   Ignite,
   ClaimReward,
-  ClaimRefund
+  ClaimRefund,
+  UndoIgnite,
+  UpdateEndTime
 } from "../generated/LiftoffEngine/LiftoffEngine";
 
 export function handleLaunchToken(event: LaunchToken): void {
@@ -124,5 +126,40 @@ export function handleClaimRefund(event: ClaimRefund): void {
   }
 
   igniter.hasRefunded = true;
+  igniter.save();
+}
+
+export function handleUpdateEndTime(event: UpdateEndTime): void {
+  let tokenSaleId = event.params.tokenId.toString();
+  let tokenSale = TokenSale.load(tokenSaleId);
+
+  if (tokenSale == null) {
+    log.info("cannot find tokenSale {}", [tokenSaleId]);
+    return;
+  }
+
+  tokenSale.endTime = event.params.endTime.toI32();
+  tokenSale.save();
+}
+
+export function handleUndoIgnite(event: UndoIgnite): void {
+  let tokenSaleId = event.params._tokenSaleId.toString();
+  let tokenSale = TokenSale.load(tokenSaleId);
+
+  if (tokenSale == null) {
+    log.info("cannot find tokenSale {}", [tokenSaleId]);
+    return;
+  }
+
+  let igniteId =
+    "ignite_" + tokenSaleId + "_" + event.params.igniter.toHexString();
+  let igniter = Ignitor.load(igniteId);
+
+  if (igniter == null) {
+    log.info("cannot find igniter {}", [igniteId]);
+    return;
+  }
+
+  igniter.ignited = zero;
   igniter.save();
 }
