@@ -162,4 +162,9 @@ export function handleUndoIgnite(event: UndoIgnite): void {
 
   igniter.ignited = zero;
   igniter.save();
+
+  tokenSale.totalIgnited = tokenSale.totalIgnited.minus(
+    event.params.wadUnIgnited
+  );
+  tokenSale.save();
 }
