@@ -46,3 +46,28 @@ type TokenInsurance @entity {
   isUnwound: Boolean
   hasBaseFeeClaimed: Boolean
 }
+
+type Partner @entity {
+  id: ID!
+  partnerId: BigInt!
+  controller: Bytes!
+  ipfsHash: String!
+}
+
+type TokenSalePartnership @entity {
+  id: ID!
+  tokenSaleId: BigInt!
+  totalPartnerships: Int!
+  totalBPForPartners: BigInt!
+  partnershipRequests: [Partnership]!
+    @derivedFrom(field: "tokenSalePartnership")
+}
+
+type Partnership @entity {
+  id: ID!
+  partnerId: BigInt!
+  tokenSaleId: BigInt!
+  feeBP: BigInt!
+  isApproved: Boolean!
+  tokenSalePartnership: TokenSalePartnership!
+}

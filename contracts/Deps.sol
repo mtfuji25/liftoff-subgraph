@@ -12,3 +12,6 @@ import {
 import {
     LiftoffSettings
 } from "liftoff-core-contracts/contracts/LiftoffSettings.sol";
+import {
+    LiftoffPartnerships
+} from "liftoff-core-contracts/contracts/LiftoffPartnerships.sol";

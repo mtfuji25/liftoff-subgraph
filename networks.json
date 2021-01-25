@@ -38,5 +38,15 @@
       "address": "0x4f250e2236457259BDac9f651f62e972Ce502Caa",
       "transactionHash": "0xdb793213b9c710e28292739cba7b0cd2c9f906218336aa7bb5015af9f3e54dc9"
     }
+  },
+  "LiftoffPartnerships": {
+    "1": {
+      "address": "0x7d7734157f6f0394D46E085441369E60f4c7313a",
+      "transactionHash": "0x6a2f98fff4b637ee9550bb690676268a7f1bd7984e686892e7374146e6f81254"
+    },
+    "3": {
+      "address": "0x58711cBF62585bcb907237D3CC047664e62BfD99",
+      "transactionHash": "0xfb62d7256a45917def563cb49609f0607e78de342fd0962f56c83447999e95e6"
+    }
   }
 }

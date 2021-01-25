@@ -16,7 +16,8 @@ module.exports = function(callback) {
       "LiftoffEngine",
       "LiftoffInsurance",
       "LiftoffRegistration",
-      "LiftoffSettings"
+      "LiftoffSettings",
+      "LiftoffPartnerships"
     ]) {
       const { abi } = fs.readJsonSync(`build/contracts/${contractName}.json`);
       fs.outputJsonSync(`abis/${contractName}.json`, abi, { spaces: 2 });

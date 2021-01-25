@@ -26,7 +26,7 @@
   "devDependencies": {
     "@graphprotocol/graph-cli": "^0.19.0",
     "@graphprotocol/graph-ts": "^0.19.0",
-    "@lidprotocol/xlock-contracts": "^1.0.1",
+    "@lidprotocol/xlock-contracts": "^1.1.0",
     "liftoff-core-contracts": "https://github.com/Lid-Protocol/liftoff-core-contracts.git"
   },
   "dependencies": {

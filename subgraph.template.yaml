@@ -85,3 +85,37 @@ dataSources:
         - event: Redeem(uint256,uint256)
           handler: handleRedeem
       file: ./src/LiftoffInsuranceMapping.ts
+  - kind: ethereum/contract
+    name: LiftoffPartnerships
+    network: {{network}}
+    source:
+      address: "{{LiftoffPartnerships.address}}"
+      abi: LiftoffPartnerships
+      startBlock: {{LiftoffPartnerships.startBlock}}
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.3
+      language: wasm/assemblyscript
+      entities:
+        - Partner
+        - TokenSalePartnership
+        - Partnership
+      abis:
+        - name: LiftoffPartnerships
+          file: ./abis/LiftoffPartnerships.json
+      eventHandlers:
+        - event: SetPartner(uint256,address,string)
+          handler: handleSetPartnerShip
+        - event: RequestPartnership(uint256,uint256,uint256)
+          handler: handleRequestPartnership
+        - event: AcceptPartnership(uint256,uint8)
+          handler: handleAcceptPartnership
+        - event: CancelPartnership(uint256,uint8)
+          handler: handleCancelPartnership
+        - event: AddFees(uint256,uint256)
+          handler: handleAddFees
+        - event: ClaimFees(uint256,uint256,uint8)
+          handler: handleClaimFees
+        - event: UpdatePartnershipFee(uint8,uint256,uint256)
+          handler: handleUpdatePartnershipFee
+      file: ./src/LiftoffPartnershipsMapping.ts
