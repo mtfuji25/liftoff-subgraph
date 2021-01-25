@@ -125,6 +125,10 @@ export function handleClaimRefund(event: ClaimRefund): void {
     return;
   }
 
+  tokenSale.totalIgnited = tokenSale.totalIgnited.minus(igniter.ignited);
+  tokenSale.save();
+
+  igniter.ignited = zero;
   igniter.hasRefunded = true;
   igniter.save();
 }
