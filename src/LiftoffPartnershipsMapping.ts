@@ -45,8 +45,10 @@ export function handleRequestPartnership(event: RequestPartnership): void {
     tokenSalePartnership.totalBPForPartners = zero;
   }
 
-  let partnershipId =
-    tokenSalePartnershipId + "_" + event.params.partnerId.toString();
+  let requestId = BigInt.fromI32(
+    tokenSalePartnership.totalPartnerships
+  ).toString();
+  let partnershipId = tokenSalePartnershipId + "_" + requestId;
   let partnership = Partnership.load(partnershipId);
 
   if (partnership != null) {
@@ -63,6 +65,8 @@ export function handleRequestPartnership(event: RequestPartnership): void {
   partnership.tokenSaleId = event.params.tokenSaleId;
   partnership.feeBP = event.params.feeBP;
   partnership.isApproved = false;
+  partnership.partner = event.params.partnerId.toString();
+  partnership.tokenSale = event.params.tokenSaleId.toString();
   partnership.tokenSalePartnership = tokenSalePartnershipId;
   partnership.save();
 }

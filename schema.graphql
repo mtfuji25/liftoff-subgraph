@@ -16,6 +16,7 @@ type TokenSale @entity {
   name: String!
   symbol: String!
   ignitors: [Ignitor]! @derivedFrom(field: "tokenSale")
+  partnershipRequests: [Partnership]! @derivedFrom(field: "tokenSale")
 }
 
 type Ignitor @entity {
@@ -52,6 +53,7 @@ type Partner @entity {
   partnerId: BigInt!
   controller: Bytes!
   ipfsHash: String!
+  partnershipRequests: [Partnership]! @derivedFrom(field: "partner")
 }
 
 type TokenSalePartnership @entity {
@@ -69,5 +71,7 @@ type Partnership @entity {
   tokenSaleId: BigInt!
   feeBP: BigInt!
   isApproved: Boolean!
+  tokenSale: TokenSale!
+  partner: Partner!
   tokenSalePartnership: TokenSalePartnership!
 }
