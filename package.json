@@ -10,9 +10,9 @@
     "codegen:ropsten": "truffle exec --network=ropsten render-templates.js && graph codegen",
     "codegen:mainnet": "truffle exec --network=mainnet render-templates.js && graph codegen",
     "build": "graph build",
-    "deploy:mainnet": "graph deploy liaojikunwork/liftoff --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "deploy:ropsten": "graph deploy liaojikunwork/liftoff-ropsten --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
-    "deploy-local": "graph deploy liaojikunwork/liftoff --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
+    "deploy:mainnet": "graph deploy 0xBSC/liftoff --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy:ropsten": "graph deploy 0xBSC/liftoff-ropsten --ipfs https://api.thegraph.com/ipfs/ --node https://api.thegraph.com/deploy/",
+    "deploy-local": "graph deploy 0xBSC/liftoff --ipfs http://localhost:5001 --node http://127.0.0.1:8020"
   },
   "repository": {
     "type": "git",
